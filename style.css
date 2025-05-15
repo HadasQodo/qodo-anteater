@@ -1,0 +1,223 @@
+/* Import Google Fonts - Inter family for the site typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* CSS Variables for consistent theming across the site */
+:root {
+  --qodo-purple: #5845f7;
+  --qodo-purple-dark: #3722f3;
+  --qodo-pink: #db43c4;
+  --qodo-bg: #f4f4f4;
+  --qodo-gradient: linear-gradient(135deg, #5845f7 0%, #db43c4 100%);
+  --qodo-radius: 18px;
+  --qodo-font: 'Inter', Arial, sans-serif;
+}
+
+/* Base styles for the body */
+body {
+  margin: 0;
+  font-family: var(--qodo-font);
+  background: var(--qodo-bg);
+  color: #161616;
+}
+
+/* Container for consistent content width and padding */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header styling */
+.header {
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(88, 69, 247, 0.07);
+  padding: 18px 0;
+}
+/* Logo styling */
+.logo img {
+  height: 40px;
+}
+/* Navigation menu styling */
+.nav {
+  float: right;
+}
+/* Navigation links styling */
+.nav a {
+  color: var(--qodo-purple);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 32px;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+/* Navigation links hover effect */
+.nav a:hover {
+  color: var(--qodo-pink);
+}
+/* Hero section with gradient background */
+.hero {
+  background: var(--qodo-gradient);
+  color: #fff;
+  border-radius: var(--qodo-radius);
+  margin: 32px 0 48px 0;
+  padding: 48px 0 32px 0;
+  box-shadow: 0 8px 32px rgba(88, 69, 247, 0.13);
+}
+/* Flex container for hero content */
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/* Hero content area */
+.hero-content {
+  max-width: 540px;
+}
+/* Hero heading */
+.hero h1 {
+  font-size: 3rem;
+  margin: 0 0 18px 0;
+  font-weight: 700;
+}
+/* Hero subtitle */
+.subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 32px;
+  font-weight: 400;
+}
+/* Call to action button */
+.cta-btn {
+  background: #fff;
+  color: var(--qodo-purple);
+  border: none;
+  border-radius: var(--qodo-radius);
+  padding: 16px 36px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: 0 2px 12px rgba(88, 69, 247, 0.13);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+/* Call to action button hover effect */
+.cta-btn:hover {
+  background: var(--qodo-pink);
+  color: #fff;
+}
+/* Hero image styling */
+.hero-image img {
+  max-width: 320px;
+  border-radius: 50%;
+  box-shadow: 0 4px 24px rgba(219, 67, 196, 0.13);
+}
+/* Features section */
+.features {
+  margin: 64px 0 32px 0;
+}
+/* Features grid layout */
+.features-list {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+/* Individual feature card */
+.feature {
+  background: #fff;
+  border-radius: var(--qodo-radius);
+  box-shadow: 0 2px 12px rgba(88, 69, 247, 0.07);
+  padding: 32px 24px;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.2s;
+}
+/* Feature card hover animation */
+.feature:hover {
+  transform: translateY(-8px) scale(1.04);
+}
+/* Feature icon */
+.feature img {
+  height: 56px;
+  margin-bottom: 18px;
+}
+/* Feature heading */
+.feature h3 {
+  margin: 0 0 12px 0;
+  color: var(--qodo-purple);
+  font-size: 1.3rem;
+}
+/* About section */
+.about {
+  margin: 64px 0 32px 0;
+  text-align: center;
+}
+/* About section heading */
+.about h2 {
+  color: var(--qodo-purple);
+}
+/* Viral section for anteater facts */
+.viral {
+  margin: 64px 0 32px 0;
+  text-align: center;
+}
+/* Viral section heading */
+.viral h2 {
+  color: var(--qodo-pink);
+}
+/* Fact button styling */
+#fact-btn {
+  background: var(--qodo-gradient);
+  color: #fff;
+  border: none;
+  border-radius: var(--qodo-radius);
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(88, 69, 247, 0.13);
+  transition: background 0.2s;
+}
+/* Fact button hover effect */
+#fact-btn:hover {
+  background: var(--qodo-purple-dark);
+}
+/* Container for displaying anteater facts */
+#fact-box {
+  margin-top: 24px;
+  font-size: 1.2rem;
+  color: var(--qodo-purple);
+  min-height: 32px;
+}
+/* Footer styling */
+.footer {
+  background: #fff;
+  color: #6e6e6e;
+  text-align: center;
+  padding: 32px 0 18px 0;
+  border-radius: var(--qodo-radius) var(--qodo-radius) 0 0;
+  margin-top: 64px;
+  font-size: 1rem;
+}
+/* Heart icon in footer */
+.heart {
+  color: var(--qodo-pink);
+  font-size: 1.2em;
+}
+/* Responsive design for smaller screens */
+@media (max-width: 900px) {
+  .hero .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-image {
+    margin-top: 32px;
+    align-self: center;
+  }
+  .features-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}

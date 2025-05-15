@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  Background SVG for the hero section
+  Creates a curved ramp effect with white stroke lines on a transparent background
+  Used as a decorative element in the hero section of the Qodo Anteater landing page
+-->
+<svg width="2696px" height="530px" viewBox="0 0 2696 530" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>bg-hero-main-ramp</title>
+    <defs>
+        <polygon id="path-1" points="2696 0 0 0 0 530 2696 530"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="bg-hero-main-ramp">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Path"></g>
+            <g id="Group" mask="url(#mask-2)" stroke="#FFFFFF" stroke-linejoin="round">
+                <g transform="translate(-889.960000, -437.999000)" id="Path">
+                    <path d="M3536.29,500.5473 L3427.5,445.00693 C3070.028,590.544 2540.377,682.729 1949.234,682.729 C872.71,682.729 0,377.0692 0,0"></path>
+                    <path d="M539.83,571.529 C917.72,703.882 1418.268,776.779 1949.236,776.779 C2480.205,776.779 2980.735,703.882 3358.64,571.529 C3422.36,549.214 3481.61,525.5136 3536.29,500.5478 L3536.29,978.917"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
