@@ -3,11 +3,14 @@
 
 /* CSS Variables for consistent theming across the site */
 :root {
-  --qodo-purple: #5845f7;
-  --qodo-purple-dark: #3722f3;
-  --qodo-pink: #db43c4;
-  --qodo-bg: #f4f4f4;
-  --qodo-gradient: linear-gradient(135deg, #5845f7 0%, #db43c4 100%);
+  --qodo-purple: #7968FA;
+  --qodo-purple-dark: #6B5CE7;
+  --qodo-black: #000000;
+  --qodo-white: #ffffff;
+  --qodo-bg: #ffffff;
+  --qodo-gradient: linear-gradient(135deg, #7968FA 0%, #000000 100%);
+  --qodo-shadow-purple: rgba(121, 104, 250, 0.13);
+  --qodo-shadow-light: rgba(121, 104, 250, 0.07);
   --qodo-radius: 18px;
   --qodo-font: 'Inter', Arial, sans-serif;
 }
@@ -17,7 +20,7 @@ body {
   margin: 0;
   font-family: var(--qodo-font);
   background: var(--qodo-bg);
-  color: #161616;
+  color: var(--qodo-black);
 }
 
 /* Container for consistent content width and padding */
@@ -29,8 +32,8 @@ body {
 
 /* Header styling */
 .header {
-  background: #fff;
-  box-shadow: 0 2px 12px rgba(88, 69, 247, 0.07);
+  background: var(--qodo-white);
+  box-shadow: 0 2px 12px var(--qodo-shadow-light);
   padding: 18px 0;
 }
 /* Logo styling */
@@ -52,16 +55,16 @@ body {
 }
 /* Navigation links hover effect */
 .nav a:hover {
-  color: var(--qodo-pink);
+  color: var(--qodo-black);
 }
 /* Hero section with gradient background */
 .hero {
   background: var(--qodo-gradient);
-  color: #fff;
+  color: var(--qodo-white);
   border-radius: var(--qodo-radius);
   margin: 32px 0 48px 0;
   padding: 48px 0 32px 0;
-  box-shadow: 0 8px 32px rgba(88, 69, 247, 0.13);
+  box-shadow: 0 8px 32px var(--qodo-shadow-purple);
 }
 /* Flex container for hero content */
 .hero .container {
@@ -88,28 +91,28 @@ body {
 }
 /* Call to action button */
 .cta-btn {
-  background: #fff;
+  background: var(--qodo-white);
   color: var(--qodo-purple);
   border: none;
   border-radius: var(--qodo-radius);
   padding: 16px 36px;
   font-size: 1.1rem;
   font-weight: 700;
-  box-shadow: 0 2px 12px rgba(88, 69, 247, 0.13);
+  box-shadow: 0 2px 12px var(--qodo-shadow-purple);
   cursor: pointer;
   text-decoration: none;
   transition: background 0.2s, color 0.2s;
 }
 /* Call to action button hover effect */
 .cta-btn:hover {
-  background: var(--qodo-pink);
-  color: #fff;
+  background: var(--qodo-black);
+  color: var(--qodo-white);
 }
 /* Hero image styling */
 .hero-image img {
   max-width: 320px;
   border-radius: 50%;
-  box-shadow: 0 4px 24px rgba(219, 67, 196, 0.13);
+  box-shadow: 0 4px 24px var(--qodo-shadow-purple);
 }
 /* Features section */
 .features {
@@ -125,9 +128,9 @@ body {
 }
 /* Individual feature card */
 .feature {
-  background: #fff;
+  background: var(--qodo-white);
   border-radius: var(--qodo-radius);
-  box-shadow: 0 2px 12px rgba(88, 69, 247, 0.07);
+  box-shadow: 0 2px 12px var(--qodo-shadow-light);
   padding: 32px 24px;
   text-align: center;
   width: 300px;
@@ -164,12 +167,12 @@ body {
 }
 /* Viral section heading */
 .viral h2 {
-  color: var(--qodo-pink);
+  color: var(--qodo-black);
 }
 /* Fact button styling */
 #fact-btn {
   background: var(--qodo-gradient);
-  color: #fff;
+  color: var(--qodo-white);
   border: none;
   border-radius: var(--qodo-radius);
   padding: 14px 32px;
@@ -177,7 +180,7 @@ body {
   font-weight: 700;
   margin-top: 18px;
   cursor: pointer;
-  box-shadow: 0 2px 12px rgba(88, 69, 247, 0.13);
+  box-shadow: 0 2px 12px var(--qodo-shadow-purple);
   transition: background 0.2s;
 }
 /* Fact button hover effect */
@@ -193,8 +196,8 @@ body {
 }
 /* Footer styling */
 .footer {
-  background: #fff;
-  color: #6e6e6e;
+  background: var(--qodo-white);
+  color: var(--qodo-black);
   text-align: center;
   padding: 32px 0 18px 0;
   border-radius: var(--qodo-radius) var(--qodo-radius) 0 0;
@@ -203,7 +206,7 @@ body {
 }
 /* Heart icon in footer */
 .heart {
-  color: var(--qodo-pink);
+  color: var(--qodo-purple);
   font-size: 1.2em;
 }
 /* Responsive design for smaller screens */
