@@ -27,7 +27,7 @@ let cachedFacts = [];
  */
 const logger = {
   info: (message, data = null) => {
-    if (process.env.NODE_ENV !== 'production') {
+    if (typeof process === 'undefined' || process.env.NODE_ENV !== 'production') {
       console.log(`[INFO] ${message}`, data || '');
     }
   },
