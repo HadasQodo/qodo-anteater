@@ -36,6 +36,17 @@ describe('Anteater Facts', () => {
       setCachedFacts('not an array');
       expect(getCachedFacts()).toEqual([]);
     });
+
+    it('should filter out non-string facts', () => {
+      const mixedFacts = ['valid fact', 123, 'another fact', null, 'third fact'];
+      setCachedFacts(mixedFacts);
+      expect(getCachedFacts()).toEqual(['valid fact', 'another fact', 'third fact']);
+    });
+
+    it('should handle empty array', () => {
+      setCachedFacts([]);
+      expect(getCachedFacts()).toEqual([]);
+    });
   });
 
   describe('getRandomFact', () => {
@@ -77,6 +88,21 @@ describe('Anteater Facts', () => {
       
       const facts = await fetchFactsFromInternet();
       expect(facts).toEqual(fallbackFacts);
+    });
+
+    
+    it('should return processed facts on successful fetch', async () => {
+      global.fetch = vi.fn(() => 
+        Promise.resolve({
+          ok: true,
+          status: 200,
+          text: () => Promise.resolve('<html>Mock HTML content</html>')
+        })
+      );
+      
+      const facts = await fetchFactsFromInternet();
+      expect(facts.length).toBeGreaterThan(10);
+      expect(facts).toContain("Qodo Anteater never bugs out — it just sniffs out bugs!");
     });
   });
 });
